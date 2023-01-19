@@ -39,8 +39,8 @@ public class IniManager
     /// 寫入ini檔
     /// </summary>
     /// <param name="section">寫入的Section</param>
-    /// <param name="key">該Section下寫入的Key(若無此Key則新增)</param>
-    /// <param name="value">寫入的值</param>
+    /// <param name="key">該Section下寫入的Key(若null為刪該Section)</param>
+    /// <param name="value">寫入的值(若null為刪該Key)</param>
     public void WriteIniFile(string section, string key, string value)
     {
         WritePrivateProfileString(section, key, value, filePath);
